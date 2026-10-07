@@ -1,0 +1,68 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,Inter,sans-serif}
+body{background:#0a0a0a;color:#e5e5e5;padding-bottom:80px;min-height:100vh}
+.app{display:flex;min-height:100vh}
+
+.sidebar{width:230px;background:#0f0f0f;border-right:1px solid #1c1c1c;padding:22px 14px;display:none}
+@media(min-width:900px){.sidebar{display:block}}
+
+.brand{display:flex;gap:10px;align-items:center;margin-bottom:28px}
+.logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#ff6b1a,#ff3d00)}
+.brand h3{font-size:14px;color:#fff}
+.brand p{font-size:11px;color:#666}
+
+.label{font-size:10px;letter-spacing:1.5px;color:#555;margin:18px 0 8px;font-weight:600}
+.item{display:block;padding:10px 12px;border-radius:8px;color:#999;font-size:13px;margin-bottom:3px;cursor:pointer;transition:.2s}
+.item:hover{background:#161616;color:#fff}
+.item.active{background:linear-gradient(90deg,#2a0f00,#1a0a00);color:#ff6b1a;border:1px solid #3a1500}
+
+.main{flex:1;padding:14px}
+.topbar{display:flex;gap:8px;margin-bottom:16px}
+.pill{padding:8px 14px;background:#131313;border:1px solid #1f1f1f;border-radius:20px;font-size:13px}
+.pill.active{background:#fff;color:#000;font-weight:600}
+
+.content{display:flex;flex-direction:column;gap:14px;max-width:880px}
+
+.card{background:linear-gradient(145deg,#111,#0d0d0d);border:1px solid #1a1a1a;border-radius:16px;padding:20px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(255,107,26,.06),transparent 60%);pointer-events:none}
+
+.badge{display:inline-block;padding:5px 12px;border-radius:20px;background:#0d2a0d;color:#4ade80;font-size:11px;margin-bottom:12px;border:1px solid #14532d}
+.card h2{font-size:20px;color:#fff;margin-bottom:6px}
+.card h3{font-size:15px;color:#fff;margin-bottom:12px}
+.muted{color:#666;font-size:13px}
+
+.stats{display:flex;gap:10px;margin-top:16px}
+.stat{flex:1;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:12px;text-align:center}
+.stat span{font-size:20px;font-weight:700;color:#ff6b1a;display:block}
+.stat small{font-size:11px;color:#666}
+
+input,select{width:100%;padding:12px 14px;margin-bottom:10px;background:#0a0a0a;border:1px solid #222;border-radius:10px;color:#fff;font-size:14px;outline:none}
+input:focus,select:focus{border-color:#ff6b1a}
+
+button{width:100%;padding:13px;background:linear-gradient(135deg,#ff6b1a,#ff3d00);border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:.2s}
+button:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,107,26,.3)}
+button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+.logHead{display:flex;justify-content:space-between;align-items:center}
+#pct{color:#ff6b1a;font-weight:700;font-size:14px}
+
+.bar{height:6px;background:#1a1a1a;border-radius:3px;overflow:hidden;margin:10px 0 14px}
+#fill{height:100%;width:0;background:linear-gradient(90deg,#ff6b1a,#ff3d00);transition:width .4s}
+
+.term{background:#000;border:1px solid #1a1a1a;border-radius:10px;padding:14px;height:260px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:12.5px}
+.term div{margin:4px 0;line-height:1.5}
+.term .info{color:#888}
+.term .success{color:#4ade80}
+.term .error{color:#f87171}
+
+.rBadge{display:inline-block;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:12px}
+.rBadge.success{background:#0d2a0d;color:#4ade80;border:1px solid #14532d}
+.rBadge.error{background:#2a0d0d;color:#f87171;border:1px solid #7f1d1d}
+
+#rBody a{display:block;padding:12px;margin:6px 0;background:#0a0a0a;border:1px solid #1f1f1f;border-radius:10px;color:#ff6b1a;text-decoration:none;font-size:13px;transition:.2s}
+#rBody a:hover{border-color:#ff6b1a;background:#150a00}
+
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#0d0d0d;border-top:1px solid #1a1a1a;display:flex;justify-content:space-around;padding:10px 0;z-index:100}
+@media(min-width:900px){.bottom{display:none}}
+.bottom a{display:flex;flex-direction:column;align-items:center;color:#666;font-size:18px;text-decoration:none;gap:2px}
+.bottom a small{font-size:10px}
+.bottom a.active{color:#ff6b1a}
